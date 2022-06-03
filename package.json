@@ -8,7 +8,7 @@
     "start": "nodemon index.ts",
     "seed": "ts-node ./seed/seed.ts",
     "lint": "eslint . --ext .ts",
-    "heroku-postbuild": "cd frontend && npm install && ng serve"
+    "heroku-postbuild": "cd frontend && npm install && npm i @angular/cli && ng serve"
   },
   "author": "",
   "license": "ISC",
