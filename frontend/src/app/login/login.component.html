@@ -1,0 +1,25 @@
+<div [hidden]="submitted" style="width: 400px;">
+    <div class="card-body" style="background-color: silver; border-radius: 25px;">
+      <h4> Login </h4>
+        <form (ngSubmit)="onSubmitLogin()">
+            <div class="form-group">
+              <label for="name">Email Id</label>
+              <input type="text" class="form-control" id="emailId" required [(ngModel)]="user.emailId" name="emailId">
+            </div>
+        
+            <div class="form-group">
+              <label for="name">Password</label>
+              <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+            </div>
+        
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group mr-2" role="group" aria-label="First group">
+                <button type="submit" class="btn btn-danger">Login</button>
+              </div>
+              <div class="btn-group mr-2" role="group" aria-label="Second group">
+                <button (click)="onSignup()" class="btn btn-danger">Sign up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+</div>

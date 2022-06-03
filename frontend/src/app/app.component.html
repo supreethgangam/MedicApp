@@ -1,0 +1,33 @@
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&family=Oswald&display=swap" rel="stylesheet"> 
+
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark" style="font-family: dosis; font-size: 22px; background-color: aqua;">
+  <!-- Links -->
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a routerLink="dashboard" class="nav-link" routerLinkActive="active">Home</a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="add" class="nav-link" routerLinkActive="active">Add User</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="addhospital" class="nav-link" routerLinkActive="active">Add Hospital</a>
+  </li> 
+  </ul>
+  <ul class="nav navbar-nav navbar-right" style="align-self: right; font-size: 17px;">             
+    <li style="align-content:center">
+        <button (click)="onLogout()" class="btn btn-danger" >Logout</button>
+    </li>
+</ul>
+</nav>
+
+<div class="container-xxl" style="font-family: dosis; font-size: 18px; background-color: beige;">
+  <br>
+  <h2 style="text-align: center; font-family: dosis; font-size: 30px;">{{title}}</h2>
+  <!-- <hr>   -->
+  <div class="card"  style="height: 605px; background-color: beige; padding-left: 8%; padding-right: 8%; padding-top: 1%;">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

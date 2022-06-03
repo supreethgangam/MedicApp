@@ -1,0 +1,32 @@
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&family=Oswald&family=Titillium+Web:wght@300;400&display=swap" rel="stylesheet"> 
+<div class="panel panel-primary" style="font-family: dosis; font-size: 20px;">
+    <div class="panel-heading">
+      <h2>User List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | async">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.role}}</td>
+            <td>{{user.emailId}}</td>
+            <td>
+              <button (click)="updateUser(user.id)" class="btn btn-warning" style="margin-left: 10px">Update</button>
+              <button (click)="deleteUser(user._id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                <button (click)="userDetails(user._id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
